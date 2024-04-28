@@ -1,6 +1,6 @@
 # Getting Started
 
-# Product SHhop Application Details.
+# Product Shop Application Details.
 
 ## cds add data
 
@@ -9,3 +9,6 @@
 ## cds watch
 
 * start the server and listen to your file changes.
+
+
+## namespace --> unique name to your application.
