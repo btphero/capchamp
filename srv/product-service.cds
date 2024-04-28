@@ -1,3 +1,4 @@
+
 using { sap.cap.productshop as my } from '../db/schema';
 
 service productshop
