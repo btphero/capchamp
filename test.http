@@ -3,5 +3,8 @@
 
 #GET http://localhost:4004/rest/product/addition(num1=5,num2=10)
 
+# Product 
+#GET http://localhost:4004/odata/v4/productshop/Product
 
-GET http://localhost:4004/rest/product/MyFunction(category=1)
+# Supplier
+GET http://localhost:4004/odata/v4/productshop/Supplier
