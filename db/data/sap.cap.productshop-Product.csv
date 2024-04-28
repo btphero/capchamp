@@ -1,4 +1,4 @@
 ID,name,category,cost_price,cost_stock,emission,rating
-1,BMW,1,2322,12,20000,A+
-2,Audi,2,2344,17,30000,B+
-3,Hyundai,3,4424,65,45000,C+
+0b0cc26d-5836-4040-a680-ec88a4cc9ffc,BMW,1,2322,12,20000,A+
+9df8f181-ed02-4185-ad7f-384dabe6941f,Audi,2,2344,17,30000,B+
+58d2aaf2-8840-485f-b014-e62bd2868713,Hyundai,3,4424,65,45000,C+
