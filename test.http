@@ -7,16 +7,19 @@
 #GET http://localhost:4004/odata/v4/productshop/Product
 
 # Supplier
-#GET http://localhost:4004/odata/v4/productshop/Supplier
+#GET http://localhost:33019/odata/v4/productshop/Supplier?$expand=product
 
-POST http://localhost:4004/odata/v4/productshop/Product
+#GET http://localhost:33019/odata/v4/productshop/Product?$expand=supplier&$select=name,category,rating
+
+
+
+GET http://localhost:4004/odata/v4/productshop/products
+
+
+POST http://localhost:33229/odata/v4/productshop/orderproduct
 Content-Type: application/json
 
-    {
-      "emission": 3321,
-      "rating": "D+",
-      "name": "Maruti",
-      "category": "3",
-      "cost_price": 2322,
-      "cost_stock": 12
-    }
+{
+  "name": "Audi" ,
+  "stock: 15"
+}

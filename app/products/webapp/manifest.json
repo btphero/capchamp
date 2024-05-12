@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "ns.productshop",
+    "id": "ns.products",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.13.2",
-      "toolsId": "36a62600-d1a8-4af0-92cc-2c1c309b2dea"
+      "version": "1.13.3",
+      "toolsId": "3c71b308-d87a-4ff0-a7dd-bc9dad60b785"
     },
     "dataSources": {
       "mainService": {
@@ -61,7 +61,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ns.productshop.i18n.i18n"
+          "bundleName": "ns.products.i18n.i18n"
         }
       },
       "": {
@@ -83,7 +83,6 @@
       "css": []
     },
     "routing": {
-      "config": {},
       "routes": [
         {
           "pattern": ":?query:",
@@ -111,7 +110,15 @@
                     "route": "ProductObjectPage"
                   }
                 }
-              }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },

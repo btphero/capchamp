@@ -7,17 +7,54 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "express": "^4"
+    "express": "^4",
+    "@sap/xssec": "^3",
+    "@sap/cds-hana": "^2"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "^1.120.8"
+    "@sap/ux-specification": "^1.120.9"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-productshop": "cds watch --open productshop/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-productshop": "cds watch --open productshop/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-products": "cds watch --open products/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
-    "app/productshop"
-  ]
+    "app/productshop",
+    "app/products"
+  ],
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "john": {
+              "roles": [
+                "productmanager"
+              ]
+            },
+            "mario": {
+              "password": "initial",
+              "roles": [
+                "productmanager"
+              ]
+            },
+            "henry": {
+              "roles": [
+                "productdeveloper"
+              ]
+            }
+          }
+        }
+      },
+      "db": {
+        "kind": "sqlite",
+        "credential": {
+          "database": "db.sqlite"
+        }
+      }
+    }
+  }
 }
